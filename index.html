@@ -9,12 +9,30 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+    <header>
+        Jasper's Bot
+            <div class="record">
+                <ul class="record specific">
+                    <li class="yours">Your Round Wins</li>
+                    <li class="comps">Comp Round Wins</li>
+                </ul>
+            </div>
+    </header>
     <h1 id="instigate">Who will win?</h1>
+    <h2 class="text">Your Choice</h2>
     <div class="gallery">
         <ul>
-        <li><img onclick="rock()" src="img/rock.png"></li>
-        <li><img onclick="paper()" src="img/paper.png"></li>
-        <li><img onclick="scissor()" src="img/scissor.png"></li>
+        <li><img onclick="rock()" src="img/rock.png" id="r1"></li>
+        <li><img onclick="paper()" src="img/paper.png" id="p1"></li>
+        <li><img onclick="scissor()" src="img/scissor.png" id="s1"></li>
+    </ul>
+    </div>
+    <h2 class="text">Computer Choice</h2>
+    <div class="gallery">
+        <ul>
+        <li><img src="img/rock.png" id="r2"></li>
+        <li><img src="img/paper.png" id="p2"></li>
+        <li><img src="img/scissor.png" id="p3"></li>
     </ul>
     </div>
 </body>

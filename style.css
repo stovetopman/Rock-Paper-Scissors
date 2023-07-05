@@ -1,11 +1,52 @@
+* {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+
 .gallery {
     display: flex;
 text-align: center;
 align-items: center;
 justify-content: center;
+min-height: 300px;
+min-width: 300px;
+}
+
+header {
+    padding: 30px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.record {
+    background-color: grey;
+    color: grey;
+}
+
+.yours {
+    margin: 5px;
+    background-color: grey;
+}
+
+.comps {
+    margin: 5px;
+    background-color: grey;
+}
+
+img {
+    width: 200px;
+    height: 200px;
 }
 
 #instigate {
+    text-align: center;
+    font-size: 100px;
+}
+
+.text {
     text-align: center;
 }
 
@@ -15,8 +56,39 @@ ul {
 
 li {
     list-style: none;
-    margin: 5px;
+    margin: 50px;
+    
 }
+
+li:hover {
+    animation: spin 1s infinite linear;
+}
+
+#instigate {
+        animation: spin 3s infinite linear;
+    padding: 40px;
+    background-color: transparent;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+    /* from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); } */
+  }
 
 
    

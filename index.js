@@ -1,16 +1,13 @@
 function getComputerChoice() {
     let choice = getRandomInt(1,3); 
     if (choice == 1) {
-        console.log("rock");
-        alert("rock");
+        console.log("comp rock");
         return "Rock";
     } else if (choice == 2) {
-        console.log("paper");
-        alert("paper");
+        console.log("comp paper");
         return "Paper";
     } else if (choice == 3) {
-        console.log("scissor");
-        alert("scissor");
+        console.log("comp scissor");
         return "Scissor";
     } else {
         alert("simething went wroint");
@@ -33,24 +30,25 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == "Rock" && computerSelection == "Paper") {
         compWins+= 1;
         console.log("1");
-    } else if (playerSelection = "Paper" && computerSelection == "Rock") {
+    } else if (playerSelection == "Paper" && computerSelection == "Rock") {
         yourWins+= 1;
         console.log("2");
     } if (playerSelection == "Rock" && computerSelection == "Scissor") {
         yourWins+= 1;
         console.log("3");
-    } else if (playerSelection = "Scissor" && computerSelection == "Rock") {
+    } else if (playerSelection == "Scissor" && computerSelection == "Rock") {
         compWins+= 1;
         console.log("4");
     } if (playerSelection == "Scissor" && computerSelection == "Paper") {
         yourWins+= 1;
         console.log("5");
-    } else if (playerSelection = "Paper" && computerSelection == "Scissor") {
+    } else if (playerSelection == "Paper" && computerSelection == "Scissor") {
         compWins+= 1;
         console.log("6");
     } else if (playerSelection === computerSelection) {
         console.log("7");
     }
+  
 
 }
 
@@ -65,24 +63,27 @@ function playRound(playerSelection, computerSelection) {
 // }
 
 function rock() {
+    console.log("you rock");
     playRound("Rock", getComputerChoice());
     checkWin();
 }
 
 function paper() {
+    console.log("you paper");
     playRound("Paper", getComputerChoice());
     checkWin();
 }
 
 function scissor() {
+    console.log("you scissor");
     playRound("Scissor", getComputerChoice());
     checkWin();
 }
 
 function checkWin() {
     if (compWins >= 3) {
-        alert("Computer wins");
+        document.getElementById("instigate").innerHTML = "Computer Wins";
     } else if (yourWins >= 3) {
-        alert ("you win");
+        document.getElementById("instigate").innerHTML = "You Wins";
     }
 }
