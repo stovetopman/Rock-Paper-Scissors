@@ -81,6 +81,8 @@ function scissor() {
 }
 
 function checkWin() {
+    document.getelementById("yourwins").innterHTML = "Your Round Wins" + yourWins;
+    document.getelementById("compwins").innterHTML = "Comp Round Wins" + compWins;
     if (compWins >= 3) {
         document.getElementById("instigate").innerHTML = "Computer Wins";
     } else if (yourWins >= 3) {
